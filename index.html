@@ -109,6 +109,24 @@
       $(document).ready(() =>
         console.log("Let's get ready to party wwith jQuery!")
       );
+      $("img").addClass("img-center");
+      $("article p").last().remove();
+      $("#title").css("font-size", Math.random() * 100);
+      $("ol").append("<li>Whatever you want</li>");
+      $("aside")
+        .empty()
+        .append("<p>We deeply apologize for the list’s existence.</p>");
+      $("input").on("keyup", function () {
+        let rbg = `rgb(${$("input").eq(0).val()},${$("input").eq(2).val()}, ${$(
+          "input"
+        )
+          .eq(1)
+          .val()})`;
+        $("body").css("background-color", rbg);
+      });
+      $("img").on("click", function () {
+        $(this).remove();
+      });
     </script>
   </body>
 </html>
